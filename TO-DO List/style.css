@@ -65,5 +65,46 @@ ul li{
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
+    position: relative;
 
+}
+ul li::before{
+    /* UNCHEKED IMAGE WILL HERE WORK  */
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(To-Do-Img/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+/* DRAW THE CROSS LINE ON THE TASK  */
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(To-Do-Img/images/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+     height: 40px;
+     border-radius: 50%;
+}
+
+/* HOVER ON THE CROSS IMAGE */
+ul li span:hover{
+    background: #edeef0;
 }
